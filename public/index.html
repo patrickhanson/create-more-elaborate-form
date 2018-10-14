@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Create User</title>
+</head>
+<body>
+    <h1>Create User</h1>
+    <form id="user-create-form" action="./api/user" method="post">
+        <div id="userinfo">
+            <h1>User Info</h1>
+            <div>
+                <label>Username:</label>
+                <input type="text" id="username" name="username" autofocus>
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div>
+                <label>Phone Number:</label>
+                <input type="tel" id="phonenumber" name="phonenumber">
+            </div>
+            <div>
+                <label>Homepage:</label>
+                <input type="url" id="homepage" name="homepage">
+            </div>
+            <div>
+                <label>Birth Date:</label>
+                <input type="date" id="birthdate">
+            </div>
+        </div>
+        <div>
+            <h1>Preferred Communication Method</h1>
+            <fieldset id="commtype">
+                <input type="radio" name="commtype" value="Email"> Email<br>
+                <input type="radio" name="commtype" value="Phone"> Phone<br>
+                <input type="radio" name="commtype" value="SmokeSignal" checked> Smoke Signal<br>
+            </fieldset>
+        </div>
+        <div>
+            <h1>User Type</h1>
+            <select id="usertype">
+                <option value="user">User</option>
+                <option value="moderator">Moderator</option>
+                <option value="administrator">Administrator</option>
+                <option value="lurker">Lurker</option>
+            </select>
+        </div>
+        <button type="button">Create User</button>
+        <input type="reset">
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
